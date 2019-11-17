@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.luigi.cocktails.app.model.TCocktailXIngredient;
 import com.luigi.cocktails.app.repository.ICocktailXIngredientRepository;
 import com.luigi.cocktails.app.service.ICocktailXIngredientService;
 
+@Service
 public class CocktailXIngredientServiceImpl implements ICocktailXIngredientService {
 
 	@Autowired
