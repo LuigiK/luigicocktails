@@ -11,8 +11,8 @@
 	padding: .375rem .75rem;
 	font-size: 1rem;
 	line-height: 1.5;
-	color: #000000;
-	border: 1px solid #000000;
+	color: #4D392F;
+	border: 1px solid #C996EB;
 	font-weight: bold;
 	border-radius: 5px;
 	font-family: "Comic Sans MS", cursive, sans-serif;
@@ -28,8 +28,8 @@
 	height: calc(1.5em + .75rem + 2px);
 	padding: .375rem .75rem;
 	font-size: 1rem;
-	color: #000000;
-	border: 1px solid #000000;
+	color: #4D392F;
+	border: 1px solid #C996EB;
 	border-radius: 5px;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 }
@@ -44,7 +44,7 @@
 	text-overflow: ellipsis; /* show ... */
 	cursor: default;
 	border-radius: 5px;
-	color: #000000; /* font color */
+	color: #4D392F; /* font color */
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	font-weight: bold;
 }
