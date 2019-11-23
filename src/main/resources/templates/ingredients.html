@@ -13,10 +13,12 @@
 		<div class="row h-50">
 			<div class="col-1">&nbsp;</div>
 			<div class="col-10">
+				<h1 style="text-align: center; color: #4D392F;">FIND COCKTAILS YOU CAN MAKE</h1>
+				<h3 style="text-align: center; color: #C996EB;">mark the ingredients and press search for the result</h3>
 				<form action="#" th:action="@{/result}" th:object="${ingredientsFormModel}" method="post">
 					<div class="form-group">
-						<input class="form-control" id="search" placeholder="Filter">
 						<div class="input-group-append">
+							<input class="form-control" id="search" placeholder="Filter">
 							<button class="button" type="submit">Search</button>
 						</div>
 						<div class="form-check form-check-inline">

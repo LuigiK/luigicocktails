@@ -19,13 +19,15 @@
 							<th class="thText">Name</th>
 							<th class="thText">Match</th>
 							<th class="thText">URL</th>
+							<th> <input type="button" onclick="location.href='/'" value="Back"></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr th:each="cocktailMatchModel : ${matches}">
 							<td class="resultItem"><span th:text="${cocktailMatchModel.cocktailName}"></span></td>
 							<td class="resultItem"><span th:text="${cocktailMatchModel.percentageMatch}"></span></td>
-							<td class="resultItem"><span><a th:href="${cocktailMatchModel.url}" target="_blank">Link</a></span></td>
+							<td class="resultItem"><span><a th:href="${cocktailMatchModel.url}" target="_blank">Wikipedia link</a></span></td>
+							<td></td>
 						</tr>
 					</tbody>
 				</table>
