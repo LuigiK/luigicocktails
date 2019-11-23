@@ -16,16 +16,16 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th>Example TH1</th>
-							<th>Example TH2</th>
-							<th>Example TH3</th>
+							<th class="thText">Name</th>
+							<th class="thText">Match</th>
+							<th class="thText">URL</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td><span>Example TD1</span></td>
-							<td><span>Example TD1</span></td>
-							<td><span>Example TD1</span></td>
+						<tr th:each="cocktailMatchModel : ${matches}">
+							<td class="resultItem"><span th:text="${cocktailMatchModel.cocktailName}"></span></td>
+							<td class="resultItem"><span th:text="${cocktailMatchModel.percentageMatch}"></span></td>
+							<td class="resultItem"><span><a th:href="${cocktailMatchModel.url}" target="_blank">Link</a></span></td>
 						</tr>
 					</tbody>
 				</table>
