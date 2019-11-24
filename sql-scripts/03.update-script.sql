@@ -5,3 +5,10 @@ DELETE FROM co.t_cocktails_x_ingredients WHERE ingredient_id = 21 AND cocktail_i
 DELETE FROM co.t_cocktails_x_ingredients WHERE ingredient_id = 21 AND cocktail_id = 53;
 
 DELETE FROM co.t_ingredients WHERE ingredient_id = 21;
+
+DELETE FROM co.t_cocktails_x_ingredients
+	WHERE cocktail_id in (SELECT t.cocktail_id FROM co.t_cocktails t WHERE t.cocktail_id NOT IN 
+	(SELECT t.cocktail_id FROM (SELECT distinct on (name) name, cocktail_id FROM co.t_cocktails) t));
+	
+DELETE FROM co.t_cocktails WHERE cocktail_id in (SELECT t.cocktail_id FROM co.t_cocktails t WHERE t.cocktail_id NOT IN 
+	(SELECT t.cocktail_id FROM (SELECT distinct on (name) name, cocktail_id FROM co.t_cocktails) t));
