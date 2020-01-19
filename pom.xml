@@ -11,7 +11,7 @@
 	<groupId>com.luigicocktails</groupId>
 	<artifactId>LuigiCocktails</artifactId>
 	<packaging>war</packaging>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<name>LuigiCocktails</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -20,6 +20,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.test.skip>true</maven.test.skip>
 	</properties>
 
 	<dependencies>
@@ -63,6 +64,24 @@
 		
 	</dependencies>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <activatedProperties>dev</activatedProperties>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <activatedProperties>prod</activatedProperties>
+            </properties>
+        </profile>
+    </profiles>
+    
 	<build>
 	<finalName>ROOT</finalName>
 		<plugins>
